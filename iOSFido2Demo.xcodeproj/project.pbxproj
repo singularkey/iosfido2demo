@@ -1,0 +1,702 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5FF3473A23202A5B007FB3EE /* SingularKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF3473923202A5B007FB3EE /* SingularKey.framework */; };
+		5FF3473B23202A5F007FB3EE /* SingularKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF3473923202A5B007FB3EE /* SingularKey.framework */; };
+		5FF3473C23202A5F007FB3EE /* SingularKey.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF3473923202A5B007FB3EE /* SingularKey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D58338AA22B8AB6F000AEDA0 /* NetworkAPIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58338A922B8AB6F000AEDA0 /* NetworkAPIUtils.swift */; };
+		D58338AC22B8AE39000AEDA0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58338AB22B8AE39000AEDA0 /* HomeViewController.swift */; };
+		D58CD204231E3307007196B3 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CD203231E3307007196B3 /* SignUpViewModel.swift */; };
+		D58CD208231E3C93007196B3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CD207231E3C93007196B3 /* LoginViewModel.swift */; };
+		D5D2CBBF22B75D8B00FE64BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2CBBE22B75D8B00FE64BA /* AppDelegate.swift */; };
+		D5D2CBC122B75D8B00FE64BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2CBC022B75D8B00FE64BA /* ViewController.swift */; };
+		D5D2CBC422B75D8B00FE64BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5D2CBC222B75D8B00FE64BA /* Main.storyboard */; };
+		D5D2CBC622B75D8C00FE64BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5D2CBC522B75D8C00FE64BA /* Assets.xcassets */; };
+		D5D2CBC922B75D8C00FE64BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5D2CBC722B75D8C00FE64BA /* LaunchScreen.storyboard */; };
+		D5D2CBD422B75D8C00FE64BA /* iOS_Example2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2CBD322B75D8C00FE64BA /* iOS_Example2Tests.swift */; };
+		D5D2CBDF22B75D8C00FE64BA /* iOS_Example2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2CBDE22B75D8C00FE64BA /* iOS_Example2UITests.swift */; };
+		D5D2CC1922B7674600FE64BA /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2CC1822B7674600FE64BA /* Config.swift */; };
+		D5D2CC2422B7697000FE64BA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2CC1B22B7697000FE64BA /* SignUpViewController.swift */; };
+		D5D2CC2622B7697000FE64BA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2CC1D22B7697000FE64BA /* WelcomeViewController.swift */; };
+		D5D2CC2A22B7697000FE64BA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2CC2122B7697000FE64BA /* LoginViewController.swift */; };
+		D5D2CC2D22B76A8200FE64BA /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2CC2C22B76A8200FE64BA /* Utils.swift */; };
+		D5D2CC3422B76B2F00FE64BA /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2CC2F22B76B2F00FE64BA /* UIColorExtension.swift */; };
+		D5D2CC3522B76B2F00FE64BA /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2CC3022B76B2F00FE64BA /* UIViewExtension.swift */; };
+		D5D2CC3622B76B2F00FE64BA /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2CC3222B76B2F00FE64BA /* ShadowButton.swift */; };
+		D5D2CC3722B76B2F00FE64BA /* BoardedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2CC3322B76B2F00FE64BA /* BoardedTextField.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D5D2CBD022B75D8C00FE64BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5D2CBB322B75D8B00FE64BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5D2CBBA22B75D8B00FE64BA;
+			remoteInfo = "iOS Example2";
+		};
+		D5D2CBDB22B75D8C00FE64BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5D2CBB322B75D8B00FE64BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5D2CBBA22B75D8B00FE64BA;
+			remoteInfo = "iOS Example2";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D54B2E4422BA55C00080D243 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5FF3473C23202A5F007FB3EE /* SingularKey.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5FF3473923202A5B007FB3EE /* SingularKey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SingularKey.framework; sourceTree = "<group>"; };
+		D58338A922B8AB6F000AEDA0 /* NetworkAPIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPIUtils.swift; sourceTree = "<group>"; };
+		D58338AB22B8AE39000AEDA0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D58CD203231E3307007196B3 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		D58CD207231E3C93007196B3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		D5D2CBBB22B75D8B00FE64BA /* iOSFido2Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSFido2Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5D2CBBE22B75D8B00FE64BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D5D2CBC022B75D8B00FE64BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D5D2CBC322B75D8B00FE64BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D5D2CBC522B75D8C00FE64BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D5D2CBC822B75D8C00FE64BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D5D2CBCA22B75D8C00FE64BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5D2CBCF22B75D8C00FE64BA /* iOSFido2DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSFido2DemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5D2CBD322B75D8C00FE64BA /* iOS_Example2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Example2Tests.swift; sourceTree = "<group>"; };
+		D5D2CBD522B75D8C00FE64BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5D2CBDA22B75D8C00FE64BA /* iOSFido2DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSFido2DemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5D2CBDE22B75D8C00FE64BA /* iOS_Example2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Example2UITests.swift; sourceTree = "<group>"; };
+		D5D2CBE022B75D8C00FE64BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5D2CC1822B7674600FE64BA /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		D5D2CC1B22B7697000FE64BA /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D5D2CC1D22B7697000FE64BA /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		D5D2CC2122B7697000FE64BA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D5D2CC2C22B76A8200FE64BA /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		D5D2CC2F22B76B2F00FE64BA /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		D5D2CC3022B76B2F00FE64BA /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		D5D2CC3222B76B2F00FE64BA /* ShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
+		D5D2CC3322B76B2F00FE64BA /* BoardedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardedTextField.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D5D2CBB822B75D8B00FE64BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FF3473A23202A5B007FB3EE /* SingularKey.framework in Frameworks */,
+				5FF3473B23202A5F007FB3EE /* SingularKey.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5D2CBCC22B75D8C00FE64BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5D2CBD722B75D8C00FE64BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D54B2E2922BA47B80080D243 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FF3473923202A5B007FB3EE /* SingularKey.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D5D2CBB222B75D8B00FE64BA = {
+			isa = PBXGroup;
+			children = (
+				D5D2CBBD22B75D8B00FE64BA /* iOSFido2Demo */,
+				D5D2CBD222B75D8C00FE64BA /* iOSFido2DemoTests */,
+				D5D2CBDD22B75D8C00FE64BA /* iOS iOSFido2DemoUITests */,
+				D5D2CBBC22B75D8B00FE64BA /* Products */,
+				D54B2E2922BA47B80080D243 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D5D2CBBC22B75D8B00FE64BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D5D2CBBB22B75D8B00FE64BA /* iOSFido2Demo.app */,
+				D5D2CBCF22B75D8C00FE64BA /* iOSFido2DemoTests.xctest */,
+				D5D2CBDA22B75D8C00FE64BA /* iOSFido2DemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D5D2CBBD22B75D8B00FE64BA /* iOSFido2Demo */ = {
+			isa = PBXGroup;
+			children = (
+				D5D2CC2E22B76B2F00FE64BA /* Extensions */,
+				D5D2CC3122B76B2F00FE64BA /* Helpers */,
+				D5D2CBBE22B75D8B00FE64BA /* AppDelegate.swift */,
+				D5D2CBC022B75D8B00FE64BA /* ViewController.swift */,
+				D5D2CBC222B75D8B00FE64BA /* Main.storyboard */,
+				D5D2CBC522B75D8C00FE64BA /* Assets.xcassets */,
+				D5D2CBC722B75D8C00FE64BA /* LaunchScreen.storyboard */,
+				D5D2CBCA22B75D8C00FE64BA /* Info.plist */,
+				D5D2CC1822B7674600FE64BA /* Config.swift */,
+				D58CD207231E3C93007196B3 /* LoginViewModel.swift */,
+				D5D2CC2122B7697000FE64BA /* LoginViewController.swift */,
+				D58CD203231E3307007196B3 /* SignUpViewModel.swift */,
+				D5D2CC1B22B7697000FE64BA /* SignUpViewController.swift */,
+				D5D2CC1D22B7697000FE64BA /* WelcomeViewController.swift */,
+				D5D2CC2C22B76A8200FE64BA /* Utils.swift */,
+				D58338A922B8AB6F000AEDA0 /* NetworkAPIUtils.swift */,
+				D58338AB22B8AE39000AEDA0 /* HomeViewController.swift */,
+			);
+			name = iOSFido2Demo;
+			path = iosFido2Demo;
+			sourceTree = "<group>";
+		};
+		D5D2CBD222B75D8C00FE64BA /* iOSFido2DemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				D5D2CBD322B75D8C00FE64BA /* iOS_Example2Tests.swift */,
+				D5D2CBD522B75D8C00FE64BA /* Info.plist */,
+			);
+			name = iOSFido2DemoTests;
+			path = iosFido2DemoTests;
+			sourceTree = "<group>";
+		};
+		D5D2CBDD22B75D8C00FE64BA /* iOS iOSFido2DemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D5D2CBDE22B75D8C00FE64BA /* iOS_Example2UITests.swift */,
+				D5D2CBE022B75D8C00FE64BA /* Info.plist */,
+			);
+			name = "iOS iOSFido2DemoUITests";
+			path = iosFido2DemoUITests;
+			sourceTree = "<group>";
+		};
+		D5D2CC2E22B76B2F00FE64BA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D5D2CC2F22B76B2F00FE64BA /* UIColorExtension.swift */,
+				D5D2CC3022B76B2F00FE64BA /* UIViewExtension.swift */,
+			);
+			name = Extensions;
+			path = iosFido2Demo/Extensions;
+			sourceTree = SOURCE_ROOT;
+		};
+		D5D2CC3122B76B2F00FE64BA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D5D2CC3222B76B2F00FE64BA /* ShadowButton.swift */,
+				D5D2CC3322B76B2F00FE64BA /* BoardedTextField.swift */,
+			);
+			name = Helpers;
+			path = iosFido2Demo/Helpers;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D5D2CBBA22B75D8B00FE64BA /* iOSFido2Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5D2CBE322B75D8C00FE64BA /* Build configuration list for PBXNativeTarget "iOSFido2Demo" */;
+			buildPhases = (
+				D5D2CBB722B75D8B00FE64BA /* Sources */,
+				D5D2CBB822B75D8B00FE64BA /* Frameworks */,
+				D5D2CBB922B75D8B00FE64BA /* Resources */,
+				D54B2E4422BA55C00080D243 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOSFido2Demo;
+			productName = "iOS Example2";
+			productReference = D5D2CBBB22B75D8B00FE64BA /* iOSFido2Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D5D2CBCE22B75D8C00FE64BA /* iOSFido2DemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5D2CBE622B75D8C00FE64BA /* Build configuration list for PBXNativeTarget "iOSFido2DemoTests" */;
+			buildPhases = (
+				D5D2CBCB22B75D8C00FE64BA /* Sources */,
+				D5D2CBCC22B75D8C00FE64BA /* Frameworks */,
+				D5D2CBCD22B75D8C00FE64BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5D2CBD122B75D8C00FE64BA /* PBXTargetDependency */,
+			);
+			name = iOSFido2DemoTests;
+			productName = "iOS Example2Tests";
+			productReference = D5D2CBCF22B75D8C00FE64BA /* iOSFido2DemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D5D2CBD922B75D8C00FE64BA /* iOSFido2DemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5D2CBE922B75D8C00FE64BA /* Build configuration list for PBXNativeTarget "iOSFido2DemoUITests" */;
+			buildPhases = (
+				D5D2CBD622B75D8C00FE64BA /* Sources */,
+				D5D2CBD722B75D8C00FE64BA /* Frameworks */,
+				D5D2CBD822B75D8C00FE64BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5D2CBDC22B75D8C00FE64BA /* PBXTargetDependency */,
+			);
+			name = iOSFido2DemoUITests;
+			productName = "iOS Example2UITests";
+			productReference = D5D2CBDA22B75D8C00FE64BA /* iOSFido2DemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D5D2CBB322B75D8B00FE64BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = SingularKey;
+				TargetAttributes = {
+					D5D2CBBA22B75D8B00FE64BA = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					D5D2CBCE22B75D8C00FE64BA = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = D5D2CBBA22B75D8B00FE64BA;
+					};
+					D5D2CBD922B75D8C00FE64BA = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = D5D2CBBA22B75D8B00FE64BA;
+					};
+				};
+			};
+			buildConfigurationList = D5D2CBB622B75D8B00FE64BA /* Build configuration list for PBXProject "iOSFido2Demo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D5D2CBB222B75D8B00FE64BA;
+			productRefGroup = D5D2CBBC22B75D8B00FE64BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D5D2CBBA22B75D8B00FE64BA /* iOSFido2Demo */,
+				D5D2CBCE22B75D8C00FE64BA /* iOSFido2DemoTests */,
+				D5D2CBD922B75D8C00FE64BA /* iOSFido2DemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D5D2CBB922B75D8B00FE64BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5D2CBC922B75D8C00FE64BA /* LaunchScreen.storyboard in Resources */,
+				D5D2CBC622B75D8C00FE64BA /* Assets.xcassets in Resources */,
+				D5D2CBC422B75D8B00FE64BA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5D2CBCD22B75D8C00FE64BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5D2CBD822B75D8C00FE64BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D5D2CBB722B75D8B00FE64BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5D2CC2A22B7697000FE64BA /* LoginViewController.swift in Sources */,
+				D58338AC22B8AE39000AEDA0 /* HomeViewController.swift in Sources */,
+				D5D2CC3722B76B2F00FE64BA /* BoardedTextField.swift in Sources */,
+				D5D2CBC122B75D8B00FE64BA /* ViewController.swift in Sources */,
+				D5D2CC2D22B76A8200FE64BA /* Utils.swift in Sources */,
+				D5D2CC2622B7697000FE64BA /* WelcomeViewController.swift in Sources */,
+				D58CD204231E3307007196B3 /* SignUpViewModel.swift in Sources */,
+				D5D2CC2422B7697000FE64BA /* SignUpViewController.swift in Sources */,
+				D58CD208231E3C93007196B3 /* LoginViewModel.swift in Sources */,
+				D5D2CC3522B76B2F00FE64BA /* UIViewExtension.swift in Sources */,
+				D5D2CC3622B76B2F00FE64BA /* ShadowButton.swift in Sources */,
+				D5D2CC3422B76B2F00FE64BA /* UIColorExtension.swift in Sources */,
+				D5D2CBBF22B75D8B00FE64BA /* AppDelegate.swift in Sources */,
+				D5D2CC1922B7674600FE64BA /* Config.swift in Sources */,
+				D58338AA22B8AB6F000AEDA0 /* NetworkAPIUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5D2CBCB22B75D8C00FE64BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5D2CBD422B75D8C00FE64BA /* iOS_Example2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5D2CBD622B75D8C00FE64BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5D2CBDF22B75D8C00FE64BA /* iOS_Example2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D5D2CBD122B75D8C00FE64BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5D2CBBA22B75D8B00FE64BA /* iOSFido2Demo */;
+			targetProxy = D5D2CBD022B75D8C00FE64BA /* PBXContainerItemProxy */;
+		};
+		D5D2CBDC22B75D8C00FE64BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5D2CBBA22B75D8B00FE64BA /* iOSFido2Demo */;
+			targetProxy = D5D2CBDB22B75D8C00FE64BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D5D2CBC222B75D8B00FE64BA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5D2CBC322B75D8B00FE64BA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D5D2CBC722B75D8C00FE64BA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5D2CBC822B75D8C00FE64BA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D5D2CBE122B75D8C00FE64BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D5D2CBE222B75D8C00FE64BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D5D2CBE422B75D8C00FE64BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W8QN5AN948;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = iOSFido2Demo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.singularkey.iOSFido2Demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D5D2CBE522B75D8C00FE64BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W8QN5AN948;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = iOSFido2Demo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.singularkey.iOSFido2Demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D5D2CBE722B75D8C00FE64BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W8QN5AN948;
+				INFOPLIST_FILE = iOSFido2DemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.singularkey.iOSFido2DemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSFido2Demo.app/iOSFido2Demo";
+			};
+			name = Debug;
+		};
+		D5D2CBE822B75D8C00FE64BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W8QN5AN948;
+				INFOPLIST_FILE = iOSFido2DemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.singularkey.iOSFido2DemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSFido2Demo.app/iOSFido2Demo";
+			};
+			name = Release;
+		};
+		D5D2CBEA22B75D8C00FE64BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W8QN5AN948;
+				INFOPLIST_FILE = OSFido2DemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.singularkey.iOSFido2DemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "iOS Example2";
+			};
+			name = Debug;
+		};
+		D5D2CBEB22B75D8C00FE64BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W8QN5AN948;
+				INFOPLIST_FILE = OSFido2DemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.singularkey.iOSFido2DemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "iOS Example2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D5D2CBB622B75D8B00FE64BA /* Build configuration list for PBXProject "iOSFido2Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5D2CBE122B75D8C00FE64BA /* Debug */,
+				D5D2CBE222B75D8C00FE64BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5D2CBE322B75D8C00FE64BA /* Build configuration list for PBXNativeTarget "iOSFido2Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5D2CBE422B75D8C00FE64BA /* Debug */,
+				D5D2CBE522B75D8C00FE64BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5D2CBE622B75D8C00FE64BA /* Build configuration list for PBXNativeTarget "iOSFido2DemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5D2CBE722B75D8C00FE64BA /* Debug */,
+				D5D2CBE822B75D8C00FE64BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5D2CBE922B75D8C00FE64BA /* Build configuration list for PBXNativeTarget "iOSFido2DemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5D2CBEA22B75D8C00FE64BA /* Debug */,
+				D5D2CBEB22B75D8C00FE64BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D5D2CBB322B75D8B00FE64BA /* Project object */;
+}
