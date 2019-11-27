@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5FF3473A23202A5B007FB3EE /* SingularKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF3473923202A5B007FB3EE /* SingularKey.framework */; };
-		5FF3473B23202A5F007FB3EE /* SingularKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF3473923202A5B007FB3EE /* SingularKey.framework */; };
-		5FF3473C23202A5F007FB3EE /* SingularKey.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF3473923202A5B007FB3EE /* SingularKey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5FDD2494238E6731006DF94A /* SingularKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FDD2493238E6731006DF94A /* SingularKey.framework */; };
+		5FDD2495238E673B006DF94A /* SingularKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FDD2493238E6731006DF94A /* SingularKey.framework */; };
+		5FDD2496238E673B006DF94A /* SingularKey.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5FDD2493238E6731006DF94A /* SingularKey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D58338AA22B8AB6F000AEDA0 /* NetworkAPIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58338A922B8AB6F000AEDA0 /* NetworkAPIUtils.swift */; };
 		D58338AC22B8AE39000AEDA0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58338AB22B8AE39000AEDA0 /* HomeViewController.swift */; };
 		D58CD204231E3307007196B3 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CD203231E3307007196B3 /* SignUpViewModel.swift */; };
@@ -56,7 +56,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5FF3473C23202A5F007FB3EE /* SingularKey.framework in Embed Frameworks */,
+				5FDD2496238E673B006DF94A /* SingularKey.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,7 +64,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5FF3473923202A5B007FB3EE /* SingularKey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SingularKey.framework; sourceTree = "<group>"; };
+		5FDD2493238E6731006DF94A /* SingularKey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SingularKey.framework; sourceTree = "<group>"; };
 		D58338A922B8AB6F000AEDA0 /* NetworkAPIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPIUtils.swift; sourceTree = "<group>"; };
 		D58338AB22B8AE39000AEDA0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D58CD203231E3307007196B3 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
@@ -98,8 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FF3473A23202A5B007FB3EE /* SingularKey.framework in Frameworks */,
-				5FF3473B23202A5F007FB3EE /* SingularKey.framework in Frameworks */,
+				5FDD2494238E6731006DF94A /* SingularKey.framework in Frameworks */,
+				5FDD2495238E673B006DF94A /* SingularKey.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +123,7 @@
 		D54B2E2922BA47B80080D243 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5FF3473923202A5B007FB3EE /* SingularKey.framework */,
+				5FDD2493238E6731006DF94A /* SingularKey.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

@@ -49,7 +49,7 @@ class LoginViewController: UIViewController {
       //***************************** FIDO2 Authentication Step 2 ************************//
       //***************************** Invoke Singular Key FIDO2 API **********************//
       //**********************************************************************************//
-      self.credManager.credentialsGet(rpId: Config.rpId, origin: Config.origin, publicKeyId: result.publicKeyId, challenge: result.challenge, callback: { (result, errorMessage) in
+      self.credManager.credentialsGet(rpId: Config.rpId, origin: Config.origin, publicKeyIds: result.publicKeyIds, challenge: result.challenge, callback: { (result, errorMessage) in
         guard let result = result else {
           if let err = errorMessage {
             Global.Alert.showAlert(self, message: err)

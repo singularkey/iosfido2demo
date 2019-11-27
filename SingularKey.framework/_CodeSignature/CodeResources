@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SingularKey-Swift.h</key>
 		<data>
-		u5cZJoL4FvE1ha3UGrOZtYwbE6M=
+		hXWTBZQX+Rg+akxkZr4/aG1YVtQ=
 		</data>
 		<key>Headers/SingularKey.h</key>
 		<data>
@@ -14,15 +14,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Etd0k1/XBtfWCB6Iu5yoCD3Fvqw=
+		R1NfYCt5WN+2BYEMKqBB+z8AdhA=
+		</data>
+		<key>Modules/SingularKey.swiftmodule/arm64-apple-ios.swiftdoc</key>
+		<data>
+		28iyVw0B7a0C8hKVlvRJyC+SjmM=
+		</data>
+		<key>Modules/SingularKey.swiftmodule/arm64-apple-ios.swiftmodule</key>
+		<data>
+		dBEzcOAgbEZE2deOI85UbwfbeE4=
 		</data>
 		<key>Modules/SingularKey.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		mjF9ZoJFkKZG037Vy/KEtZq//Ag=
+		28iyVw0B7a0C8hKVlvRJyC+SjmM=
 		</data>
 		<key>Modules/SingularKey.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		eu/l0TFhoBqKoGAjP3sSPKlM0/8=
+		dBEzcOAgbEZE2deOI85UbwfbeE4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -43,7 +51,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Jqe6v4Ygy6FWSScXUtqchnu22r666CuAl695sXuFlQU=
+			LbfY87CUYaabzCmgY9mRgu4tpwTHO+0cALZDRR1RMQM=
 			</data>
 		</dict>
 		<key>Headers/SingularKey.h</key>
@@ -53,18 +61,32 @@
 			ScFPjOD3Jw7qFzsfVDsR0GuhmIT0GpwQ6UT7QjJyhTo=
 			</data>
 		</dict>
+		<key>Modules/SingularKey.swiftmodule/arm64-apple-ios.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			uQ1Jt38NZ15rbVkTA62soR+rbNYPAodo96cbZp1+3OY=
+			</data>
+		</dict>
+		<key>Modules/SingularKey.swiftmodule/arm64-apple-ios.swiftmodule</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			n6uo8hGABD0N97Drww4MjsWKTigYXxenCP+FruXgGrE=
+			</data>
+		</dict>
 		<key>Modules/SingularKey.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			n7SCzARJWiTUbTHBgUdKCxtdotdZRyrtR73IVGlY8ic=
+			uQ1Jt38NZ15rbVkTA62soR+rbNYPAodo96cbZp1+3OY=
 			</data>
 		</dict>
 		<key>Modules/SingularKey.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZV4+KEcmvdYtz5LPKc1R68/SThUiQcJELgkJKvEBxFU=
+			n6uo8hGABD0N97Drww4MjsWKTigYXxenCP+FruXgGrE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -91,7 +113,7 @@
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^</key>
+		<key>^.*</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -122,24 +144,12 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
-		<key>^</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
-		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -175,13 +185,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>

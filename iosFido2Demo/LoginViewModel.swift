@@ -9,7 +9,7 @@
 import Foundation
 
 struct LoginViewModel {
-  static func authInitiate(name: String, callback: @escaping ( (publicKeyId: String, challenge: String)?, _ error: String?) -> () ) {
+  static func authInitiate(name: String, callback: @escaping ( (publicKeyIds: [String], challenge: String)?, _ error: String?) -> () ) {
     let contentType = APIHTTPHeader.contentType
     let authInitiateEndPoint = AuthEndpoint.initiate
     let authRequest = NetworkAPIRequestFor(endpoint: authInitiateEndPoint, headers: [contentType], parameter: ["name" : name])
@@ -38,11 +38,23 @@ struct LoginViewModel {
             callback(nil, "Invalid Response!")
             return
         }
-        guard let publicKeyId = allowCredentials.first?["id"]  else {
-          callback(nil, "Invalid Response!")
-          return
+
+        if allowCredentials.count < 0 {
+            callback(nil, "Invalid Response!")
         }
-        callback((publicKeyId, challenge), nil)
+        
+        let publicKeyIds = allowCredentials.map{
+            $0["id"]
+        }
+        
+        var publicKeys: [String] = []
+        #if swift(>=5.0)
+        publicKeys = publicKeyIds.compactMap{$0}
+        #else
+        publicKeys = publicKeyIds.flatMap{$0}
+        #endif
+
+        callback((publicKeys, challenge), nil)
       }
       catch let error {
         callback(nil, error.localizedDescription)
