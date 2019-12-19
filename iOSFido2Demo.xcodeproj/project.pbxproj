@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5FDD2494238E6731006DF94A /* SingularKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FDD2493238E6731006DF94A /* SingularKey.framework */; };
-		5FDD2495238E673B006DF94A /* SingularKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FDD2493238E6731006DF94A /* SingularKey.framework */; };
-		5FDD2496238E673B006DF94A /* SingularKey.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5FDD2493238E6731006DF94A /* SingularKey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D58338AA22B8AB6F000AEDA0 /* NetworkAPIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58338A922B8AB6F000AEDA0 /* NetworkAPIUtils.swift */; };
 		D58338AC22B8AE39000AEDA0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58338AB22B8AE39000AEDA0 /* HomeViewController.swift */; };
 		D58CD204231E3307007196B3 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CD203231E3307007196B3 /* SignUpViewModel.swift */; };
@@ -30,6 +27,8 @@
 		D5D2CC3522B76B2F00FE64BA /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2CC3022B76B2F00FE64BA /* UIViewExtension.swift */; };
 		D5D2CC3622B76B2F00FE64BA /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2CC3222B76B2F00FE64BA /* ShadowButton.swift */; };
 		D5D2CC3722B76B2F00FE64BA /* BoardedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2CC3322B76B2F00FE64BA /* BoardedTextField.swift */; };
+		D5DCC62223AB71570078A501 /* SingularKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5DCC62123AB71570078A501 /* SingularKey.framework */; };
+		D5DCC62323AB715E0078A501 /* SingularKey.framework in Embed Frameworks (1 item) */ = {isa = PBXBuildFile; fileRef = D5DCC62123AB71570078A501 /* SingularKey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,21 +49,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D54B2E4422BA55C00080D243 /* Embed Frameworks */ = {
+		D54B2E4422BA55C00080D243 /* Embed Frameworks (1 item) */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5FDD2496238E673B006DF94A /* SingularKey.framework in Embed Frameworks */,
+				D5DCC62323AB715E0078A501 /* SingularKey.framework in Embed Frameworks (1 item) */,
 			);
-			name = "Embed Frameworks";
+			name = "Embed Frameworks (1 item)";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5FDD2493238E6731006DF94A /* SingularKey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SingularKey.framework; sourceTree = "<group>"; };
 		D58338A922B8AB6F000AEDA0 /* NetworkAPIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPIUtils.swift; sourceTree = "<group>"; };
 		D58338AB22B8AE39000AEDA0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D58CD203231E3307007196B3 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
@@ -91,6 +89,7 @@
 		D5D2CC3022B76B2F00FE64BA /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		D5D2CC3222B76B2F00FE64BA /* ShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
 		D5D2CC3322B76B2F00FE64BA /* BoardedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardedTextField.swift; sourceTree = "<group>"; };
+		D5DCC62123AB71570078A501 /* SingularKey.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SingularKey.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FDD2494238E6731006DF94A /* SingularKey.framework in Frameworks */,
-				5FDD2495238E673B006DF94A /* SingularKey.framework in Frameworks */,
+				D5DCC62223AB71570078A501 /* SingularKey.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +121,7 @@
 		D54B2E2922BA47B80080D243 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5FDD2493238E6731006DF94A /* SingularKey.framework */,
+				D5DCC62123AB71570078A501 /* SingularKey.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -224,7 +222,7 @@
 				D5D2CBB722B75D8B00FE64BA /* Sources */,
 				D5D2CBB822B75D8B00FE64BA /* Frameworks */,
 				D5D2CBB922B75D8B00FE64BA /* Resources */,
-				D54B2E4422BA55C00080D243 /* Embed Frameworks */,
+				D54B2E4422BA55C00080D243 /* Embed Frameworks (1 item) */,
 			);
 			buildRules = (
 			);
@@ -548,7 +546,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.singularkey.iOSFido2Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -570,7 +568,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.singularkey.iOSFido2Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
