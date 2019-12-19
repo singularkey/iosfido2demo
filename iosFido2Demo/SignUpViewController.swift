@@ -36,22 +36,25 @@ class SignUpViewController: UIViewController {
     //******************************* FIDO2 Registration Step 1 ************************//
     //******************************* Get challenge from the Server ********************//
     //**********************************************************************************//
-    SignUpViewModel.registerInitiate(name: username) { (challenge, error) in
+    SignUpViewModel.registerInitiate(name: username) { (json, error) in
       if let error = error {
         Global.Alert.showAlert(self, message: error)
         return
       }
-      guard let challenge = challenge else {
-        Global.Alert.showAlert(self, message: "Server Error!")
+      
+      guard let json = json else {
+        Global.Alert.showAlert(self, message: "Invalid JSON response from server.")
         return
       }
+      
       let modality = SecAccessControlCreateFlags.biometryAny
 
       //**********************************************************************************//
       //******************************* FIDO2 Registration Step 2 ************************//
       //***************************** Invoke Singular Key FIDO2 API **********************//
       //**********************************************************************************//
-      self.credManager.credentialsCreate(rpId: Config.rpId, origin: Config.origin, modality: modality, challenge: challenge) { (result, error) in
+      
+      self.credManager.credentialsCreate(rpId: Config.rpId, origin: Config.origin, modality: modality, json: json) { (result, error) in
         if let err = error {
           Global.Alert.showAlert(self, message: err.localizedDescription)
           return
@@ -83,3 +86,4 @@ class SignUpViewController: UIViewController {
     }
   }
 }
+

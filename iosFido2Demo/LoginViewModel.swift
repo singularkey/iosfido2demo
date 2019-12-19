@@ -9,7 +9,7 @@
 import Foundation
 
 struct LoginViewModel {
-  static func authInitiate(name: String, callback: @escaping ( (publicKeyIds: [String], challenge: String)?, _ error: String?) -> () ) {
+  static func authInitiate(name: String, callback: @escaping (_ json: [String: AnyObject]?, _ error: String?) -> () ) {
     let contentType = APIHTTPHeader.contentType
     let authInitiateEndPoint = AuthEndpoint.initiate
     let authRequest = NetworkAPIRequestFor(endpoint: authInitiateEndPoint, headers: [contentType], parameter: ["name" : name])
@@ -23,38 +23,11 @@ struct LoginViewModel {
         return
       }
       do {
-        guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
+        guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: AnyObject] else {
           callback(nil, "Invalid Response!")
           return
         }
-        if let statusCode = json["statusCode"] as? Int, let msg = json["message"] as? String {
-          if statusCode == 400 {
-            callback(nil, msg)
-            return
-          }
-        }
-        guard let allowCredentials = json["allowCredentials"] as? [[String : String]],
-          let challenge = json["challenge"] as? String else {
-            callback(nil, "Invalid Response!")
-            return
-        }
-
-        if allowCredentials.count < 0 {
-            callback(nil, "Invalid Response!")
-        }
-        
-        let publicKeyIds = allowCredentials.map{
-            $0["id"]
-        }
-        
-        var publicKeys: [String] = []
-        #if swift(>=5.0)
-        publicKeys = publicKeyIds.compactMap{$0}
-        #else
-        publicKeys = publicKeyIds.flatMap{$0}
-        #endif
-
-        callback((publicKeys, challenge), nil)
+        callback(json, nil)
       }
       catch let error {
         callback(nil, error.localizedDescription)

@@ -34,24 +34,23 @@ class LoginViewController: UIViewController {
     //***************************** FIDO2 Authentication Step 1 ************************//
     //**************************** Get challenge from the Server ***********************//
     //**********************************************************************************//
-    LoginViewModel.authInitiate(name: username) { (result, error) in
+    LoginViewModel.authInitiate(name: username) { (json, error) in
       if let error = error {
         Global.Alert.showAlert(self, message: error)
         return
       }
-      guard let result = result else {
-        Global.Alert.showAlert(self, message: "Server Error!")
+      guard let json = json else {
+        Global.Alert.showAlert(self, message: "Invalid JSON response from server.")
         return
       }
-        
-        
       //**********************************************************************************//
       //***************************** FIDO2 Authentication Step 2 ************************//
       //***************************** Invoke Singular Key FIDO2 API **********************//
       //**********************************************************************************//
-      self.credManager.credentialsGet(rpId: Config.rpId, origin: Config.origin, publicKeyIds: result.publicKeyIds, challenge: result.challenge, callback: { (result, errorMessage) in
+      
+      self.credManager.credentialsGet(rpId: Config.rpId, origin: Config.origin, json: json) { (result, error) in
         guard let result = result else {
-          if let err = errorMessage {
+          if let err = error {
             Global.Alert.showAlert(self, message: err)
             return
           } else {
@@ -72,7 +71,8 @@ class LoginViewController: UIViewController {
           // no error, login success, redirect to home
           Global.Open.homeViewController()
         }
-      })
+      }
     }
   }
 }
+

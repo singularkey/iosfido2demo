@@ -10,7 +10,7 @@ import Foundation
 
 struct SignUpViewModel {
   
-  static func registerInitiate(name: String, callback: @escaping (_ challenge: String?,_ error: String?) -> ()) {
+  static func registerInitiate(name: String, callback: @escaping (_ json: [String : AnyObject]?, _ error: String?) -> ()) {
     let contentType = APIHTTPHeader.contentType
     let registerInitiateEndPoint = RegisterEndpoint.fidoRegisterInitiate
     let registerInitiateRequest = NetworkAPIRequestFor(endpoint: registerInitiateEndPoint, headers: [ contentType], parameter: ["name" : name])
@@ -26,19 +26,12 @@ struct SignUpViewModel {
       }
       
       do {
-        guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
+        guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: AnyObject] else {
           callback(nil, "Invalid Response! JSON data conversion error")
           return
         }
-        guard let initiateRegistrationResponse = json["initiateRegistrationResponse"] as? [String: Any] else {
-          callback(nil, "Invalid Response!")
-          return
-        }
-        guard let challenge = initiateRegistrationResponse["challenge"] as? String else {
-          callback(nil, "Invalid Response! Challenge not found")
-          return
-        }
-        callback(challenge, nil)
+        
+        callback(json, nil)
       } catch let error {
         callback(nil, error.localizedDescription)
       }
@@ -85,3 +78,4 @@ struct SignUpViewModel {
     })
   }
 }
+
