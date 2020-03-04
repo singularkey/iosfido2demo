@@ -13,7 +13,7 @@ class SignUpViewController: UIViewController {
   
   @IBOutlet weak var usernameTextField: BorderTextField!
   let contentType = APIHTTPHeader.contentType
-  
+  var usernameValue = ""
   override func viewDidLoad() {
     super.viewDidLoad()
   }
@@ -29,6 +29,7 @@ class SignUpViewController: UIViewController {
       Global.Alert.showAlert(self, message: "Please input username!")
       return
     }
+    self.usernameValue = username
     self.view.endEditing(true)
     
     
@@ -72,18 +73,19 @@ class SignUpViewController: UIViewController {
         //******************************* FIDO2 Registration Step 3 ************************//
         //******* Send Signed Challenge (Attestation) to the Server for validation *********//
         //**********************************************************************************//
-        SignUpViewModel.registerComplete(createCredResponse: createCredResponse) { (userInfo, error) in
+        SignUpViewModel.registerComplete(createCredResponse: createCredResponse) { (userId, error) in
           if let error = error {
             Global.Alert.showAlert(self, message: error)
           }
-          guard let _ = userInfo else {
+          guard let _ = userId else {
             Global.Alert.showAlert(self, message: "Unknown Server Error!")
             return
           }
+          Global.UserDefaultsUtil.setUserName(name: self.usernameValue)
+          Global.UserDefaultsUtil.setUserLoggedIn()
           Global.Open.homeViewController()
         }
       }
     }
   }
 }
-

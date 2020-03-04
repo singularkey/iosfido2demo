@@ -36,14 +36,6 @@
 		<data>
 		1+5EAmuxeHLY2rRKazjW4Srp92I=
 		</data>
-		<key>README.md</key>
-		<data>
-		Vc0aWzmZbZkd31WHA60QiVVos/A=
-		</data>
-		<key>UNLICENSE</key>
-		<data>
-		/wB84R8/95ZPGlsEICxOlbXILIU=
-		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -94,20 +86,6 @@
 			<key>hash2</key>
 			<data>
 			pCQ7eEH8R/5P+8Av31C258sqB77WdJl5/Hlgws184sk=
-			</data>
-		</dict>
-		<key>README.md</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			DpV6GNPDX7xFdI1JcvH8KmW3JPOizfaPPIDLyZznvO0=
-			</data>
-		</dict>
-		<key>UNLICENSE</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			fhLl30uuEsshWBuhV87SDhmGoFCN0Q0Oikq5pM+U6Fw=
 			</data>
 		</dict>
 	</dict>

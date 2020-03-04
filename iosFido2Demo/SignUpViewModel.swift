@@ -38,7 +38,7 @@ struct SignUpViewModel {
     })
   }
   
-  static func registerComplete(createCredResponse: [String: Any], callback: @escaping (_ userInfo: [String: Any]?, _ error: String?) -> () ) {
+  static func registerComplete(createCredResponse: [String: Any], callback: @escaping (_ userId: String?, _ error: String?) -> () ) {
     let contentType = APIHTTPHeader.contentType
     let registerCompleteEndPoint = RegisterEndpoint.fidoRegisterComplete
     let registerCompleteRequest = NetworkAPIRequestFor(endpoint: registerCompleteEndPoint, headers: [contentType], parameter: createCredResponse)
@@ -60,17 +60,11 @@ struct SignUpViewModel {
           callback(nil, errorMsg)
           return
         }
-        guard let appUserInfo = json["appUserInfo"] as? [String: Any] else {
+        guard let userId = json["userId"] as? String else {
           callback(nil, "Invalid Response!")
           return
         }
-        guard let username = appUserInfo["username"] as? String else {
-          callback(nil, "Invalid Response!")
-          return
-        }
-        Global.UserDefaultsUtil.setUserName(name: username)
-        Global.UserDefaultsUtil.setUserLoggedIn()
-        callback(appUserInfo, nil)
+        callback(userId, nil)
       } catch let error {
         callback(nil, error.localizedDescription)
         return
@@ -78,4 +72,3 @@ struct SignUpViewModel {
     })
   }
 }
-
