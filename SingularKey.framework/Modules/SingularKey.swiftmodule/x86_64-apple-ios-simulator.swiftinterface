@@ -1,0 +1,492 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.1.2 effective-4.1.50 (swiftlang-1100.0.278 clang-1100.0.33.9)
+// swift-module-flags: -target x86_64-apple-ios12.1-simulator -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -Onone -module-name SingularKey
+import CommonCrypto
+import Foundation
+import LocalAuthentication
+@_exported import SingularKey
+import Swift
+import UIKit
+public protocol CBOREncodable {
+  func encode() -> [Swift.UInt8]
+}
+extension CBOR : SingularKey.CBOREncodable {
+  public func encode() -> [Swift.UInt8]
+}
+extension Int : SingularKey.CBOREncodable {
+  public func encode() -> [Swift.UInt8]
+}
+extension UInt : SingularKey.CBOREncodable {
+  public func encode() -> [Swift.UInt8]
+}
+extension UInt8 : SingularKey.CBOREncodable {
+  public func encode() -> [Swift.UInt8]
+}
+extension UInt16 : SingularKey.CBOREncodable {
+  public func encode() -> [Swift.UInt8]
+}
+extension UInt64 : SingularKey.CBOREncodable {
+  public func encode() -> [Swift.UInt8]
+}
+extension UInt32 : SingularKey.CBOREncodable {
+  public func encode() -> [Swift.UInt8]
+}
+extension String : SingularKey.CBOREncodable {
+  public func encode() -> [Swift.UInt8]
+}
+extension Float : SingularKey.CBOREncodable {
+  public func encode() -> [Swift.UInt8]
+}
+extension Double : SingularKey.CBOREncodable {
+  public func encode() -> [Swift.UInt8]
+}
+extension Bool : SingularKey.CBOREncodable {
+  public func encode() -> [Swift.UInt8]
+}
+public protocol CredentialsManagerDelegate {
+  func errorCreatingPublicKey(error: Swift.Error)
+  func errorChoosingModalityOptions(error: Swift.Error)
+  func successCreatingPublicKey(credentialModel: SingularKey.CredentialModel)
+  func successDeletingCredentials(deletedCredId: Swift.String, message: Swift.String)
+  func errorDeletingCredentials(error: Swift.Error)
+  func successAuthenticate(accessToken: (token: Swift.String, tokenType: Swift.String)?)
+  func successRegistration(userId: Swift.String)
+  func errorAuthenticate(error: Swift.Error)
+  func errorRegistration(error: Swift.Error)
+}
+public class CredentialsManager {
+  public init()
+  public var delegate: SingularKey.CredentialsManagerDelegate?
+  public var accessToken: (token: Swift.String, tokenType: Swift.String)?
+  public func authenticate(username: Swift.String, password: Swift.String)
+  public func signup(fullname: Swift.String, email: Swift.String, password: Swift.String)
+  public func authenticate(username: Swift.String)
+  public func create(showModalityActionSheetFrom viewController: UIKit.UIViewController, srcViewForPad rectView: Any)
+  public func deleteCredentials(credId: Swift.String)
+  public func credentialsCreate(rpId: Swift.String, origin: Swift.String, modality: Security.SecAccessControlCreateFlags, json: [Swift.String : Swift.AnyObject], callback: @escaping ([Swift.String : Any]?, Swift.Error?) -> ())
+  @available(*, deprecated, message: "call credentialsCreate with json param")
+  public func credentialsCreate(rpId: Swift.String, origin: Swift.String, modality: Security.SecAccessControlCreateFlags, challenge: Swift.String, callback: @escaping ([Swift.String : Any]?, Swift.Error?) -> ())
+  @available(*, deprecated, message: "call credentialsCreate with json param")
+  public func credentialsCreate(rpId: Swift.String, origin: Swift.String, modality: Security.SecAccessControlCreateFlags, excludeCreds: [Swift.String]?, challenge: Swift.String, callback: @escaping ([Swift.String : Any]?, Swift.Error?) -> ())
+  public func getInternalCredentials() -> [[Swift.String : Swift.String]]
+  public func credentialsGet(rpId: Swift.String, origin: Swift.String, json: [Swift.String : Swift.AnyObject], callback: @escaping ([Swift.String : Any]?, Swift.String?) -> ())
+  @available(*, deprecated, message: "call credentialsGet with json param")
+  public func credentialsGet(rpId: Swift.String, origin: Swift.String, publicKeyIds: [Swift.String], challenge: Swift.String, callback: @escaping ([Swift.String : Any]?, Swift.String?) -> ())
+  @available(*, deprecated, message: "call credentialsGet with json param")
+  public func credentialsGet(rpId: Swift.String, origin: Swift.String, publicKeyIds: [Swift.String], challenge: Swift.String, serverRpId: Swift.String?, callback: @escaping ([Swift.String : Any]?, Swift.String?) -> ())
+  public func showChooseModalityDialog(username: Swift.String, showModalityActionSheetFrom viewController: UIKit.UIViewController, srcViewForPad rectView: Any)
+  @objc deinit
+}
+public protocol Endpoint {
+  var path: Swift.String { get }
+  var method: SingularKey.HTTPMethod { get }
+}
+public enum LoginEndpoint : SingularKey.Endpoint {
+  case login
+  case signup
+  public var path: Swift.String {
+    get
+  }
+  public var method: SingularKey.HTTPMethod {
+    get
+  }
+  public static func == (a: SingularKey.LoginEndpoint, b: SingularKey.LoginEndpoint) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public enum ProxyEndpoint : SingularKey.Endpoint {
+  case fidoRegistrationInitiate
+  case fidoRegistrationComplete
+  case getUserCredentials
+  case fido2AuthInitiatePasswordless
+  case fido2AuthCompletePasswordless
+  public var path: Swift.String {
+    get
+  }
+  public var method: SingularKey.HTTPMethod {
+    get
+  }
+  public static func == (a: SingularKey.ProxyEndpoint, b: SingularKey.ProxyEndpoint) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public enum HTTPMethod : Swift.String {
+  case get
+  case post
+  case put
+  case delete
+  case patch
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum HTTPHeader {
+  case authorization(accessToken: Swift.String)
+  case custom(Swift.String, Swift.String)
+  case contentType
+}
+public protocol APIRequestType {
+  var parameter: [Swift.String : Any]? { get }
+  var endpoint: SingularKey.Endpoint { get }
+  var headers: [SingularKey.HTTPHeader]? { get }
+  var resourceURL: Swift.String { get }
+}
+public struct APIRequestFor : SingularKey.APIRequestType {
+  public var parameter: [Swift.String : Any]?
+  public let endpoint: SingularKey.Endpoint
+  public var resourceURL: Swift.String
+  public let headers: [SingularKey.HTTPHeader]?
+  public init(endpoint: SingularKey.Endpoint, isProxyEndPoint: Swift.Bool, headers: [SingularKey.HTTPHeader]? = [], parameter: [Swift.String : Any]?)
+}
+public enum RPIdsEndpoint : SingularKey.Endpoint {
+  case getBundleIds
+  public var path: Swift.String {
+    get
+  }
+  public var method: SingularKey.HTTPMethod {
+    get
+  }
+  public static func == (a: SingularKey.RPIdsEndpoint, b: SingularKey.RPIdsEndpoint) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public struct APIRequestForBundleCheck : SingularKey.APIRequestType {
+  public var parameter: [Swift.String : Any]?
+  public let endpoint: SingularKey.Endpoint
+  public var resourceURL: Swift.String
+  public let headers: [SingularKey.HTTPHeader]?
+  public init(rpId: Swift.String, endpoint: SingularKey.Endpoint, headers: [SingularKey.HTTPHeader]? = [], parameter: [Swift.String : Any]?)
+}
+public struct UserDefaultsManager {
+  public init()
+  public static func increasePublicKeyGenerationCounter()
+  public static func getPublicKeyGenerationCounter() -> Swift.Int
+  public static func pushCredentials(item: [Swift.String : Swift.String])
+  public static func getCredentials() -> [[Swift.String : Swift.String]]
+  public static func deleteCredentials(credId: Swift.String)
+  public static func deleteAllCredentials()
+  public static func saveBundleValidity(rpId: Swift.String)
+  public static func getBundleValidity() -> Swift.String?
+}
+extension CBOR {
+  public static func encode<T>(_ value: T) -> [Swift.UInt8] where T : SingularKey.CBOREncodable
+  public static func encode<T>(_ array: [T], asByteString: Swift.Bool = false) -> [Swift.UInt8] where T : SingularKey.CBOREncodable
+  public static func encode<A, B>(_ dict: [A : B]) -> [Swift.UInt8] where A : SingularKey.CBOREncodable, A : Swift.Hashable, B : SingularKey.CBOREncodable
+  public static func encodeUInt8(_ x: Swift.UInt8) -> [Swift.UInt8]
+  public static func encodeUInt16(_ x: Swift.UInt16) -> [Swift.UInt8]
+  public static func encodeUInt32(_ x: Swift.UInt32) -> [Swift.UInt8]
+  public static func encodeUInt64(_ x: Swift.UInt64) -> [Swift.UInt8]
+  public static func encodeNegativeInt(_ x: Swift.Int64) -> [Swift.UInt8]
+  public static func encodeByteString(_ bs: [Swift.UInt8]) -> [Swift.UInt8]
+  public static func encodeString(_ str: Swift.String) -> [Swift.UInt8]
+  public static func encodeArray<T>(_ arr: [T]) -> [Swift.UInt8] where T : SingularKey.CBOREncodable
+  public static func encodeMap<A, B>(_ map: [A : B]) -> [Swift.UInt8] where A : SingularKey.CBOREncodable, A : Swift.Hashable, B : SingularKey.CBOREncodable
+  public static func encodeTagged<T>(tag: SingularKey.CBOR.Tag, value: T) -> [Swift.UInt8] where T : SingularKey.CBOREncodable
+  public static func encodeSimpleValue(_ x: Swift.UInt8) -> [Swift.UInt8]
+  public static func encodeNull() -> [Swift.UInt8]
+  public static func encodeUndefined() -> [Swift.UInt8]
+  public static func encodeBreak() -> [Swift.UInt8]
+  public static func encodeFloat(_ x: Swift.Float) -> [Swift.UInt8]
+  public static func encodeDouble(_ x: Swift.Double) -> [Swift.UInt8]
+  public static func encodeBool(_ x: Swift.Bool) -> [Swift.UInt8]
+  public static func encodeArrayStreamStart() -> [Swift.UInt8]
+  public static func encodeMapStreamStart() -> [Swift.UInt8]
+  public static func encodeStringStreamStart() -> [Swift.UInt8]
+  public static func encodeByteStringStreamStart() -> [Swift.UInt8]
+  public static func encodeStreamEnd() -> [Swift.UInt8]
+  public static func encodeArrayChunk<T>(_ chunk: [T]) -> [Swift.UInt8] where T : SingularKey.CBOREncodable
+  public static func encodeMapChunk<A, B>(_ map: [A : B]) -> [Swift.UInt8] where A : SingularKey.CBOREncodable, A : Swift.Hashable, B : SingularKey.CBOREncodable
+}
+public protocol CBORInputStream {
+  mutating func popByte() throws -> Swift.UInt8
+  mutating func popBytes(_ n: Swift.Int) throws -> Swift.ArraySlice<Swift.UInt8>
+}
+public struct RegistrationSuccessCredModel : Swift.Codable {
+  public var credential: SingularKey.CredentialModel?
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct CredentialsModel : Swift.Codable {
+  public var credentials: [SingularKey.CredentialModel]?
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct CredentialModel : Swift.Codable {
+  public var appId: Swift.String?
+  public var companyId: Swift.String?
+  public var createdDate: Swift.Int?
+  public var credId: Swift.String?
+  public var skType: Swift.String?
+  public var userId: Swift.String?
+  public var details: SingularKey.CredentialsDetailsModel?
+  public var otherDetails: SingularKey.CredentialsOtherDetailsModel?
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct CredentialsDetailsModel : Swift.Codable {
+  public var aaguidHex: Swift.String?
+  public var attestationTrustPath: [Swift.String]?
+  public var attestationType: Swift.String?
+  public var counter: Swift.Int?
+  public var credID: Swift.String?
+  public var fmt: Swift.String?
+  public var origin: Swift.String?
+  public var publicKey: Swift.String?
+  public var labelIssuerPrefix: Swift.String?
+  public var accountName: Swift.String?
+  public var phoneNumber: Swift.String?
+  public var subjectDn: SingularKey.DetailsModelSubjectDn?
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct DetailsModelSubjectDn : Swift.Codable {
+  public var organization: Swift.String?
+  public var commonName: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct CredentialsOtherDetailsModel : Swift.Codable {
+  public var accessModality: Swift.String?
+  public var deviceInfo: SingularKey.DeviceInfoModel?
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct DeviceInfoModel : Swift.Codable {
+  public var carrier: Swift.String?
+  public var deviceCountry: Swift.String?
+  public var id: Swift.String?
+  public var manufacturer: Swift.String?
+  public var model: Swift.String?
+  public var name: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public protocol CredentialsViewModelDelegate {
+  func credentiasFetched()
+  func errorFectchingCredentials(error: Swift.Error)
+}
+public enum SKType : Swift.String {
+  case totp
+  case sms
+  case fidoMobileApp
+  case webAuthNHwToken
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct CredRecord {
+  public var id: Swift.String?
+  public var name: Swift.String?
+  public var detail1: (name: Swift.String, value: Swift.String)?
+  public var detail2: (name: Swift.String, value: Swift.String)?
+  public var detail3: (name: Swift.String, value: Swift.String)?
+  public var detail4: (name: Swift.String, value: Swift.String)?
+  public var detail5: (name: Swift.String, value: Swift.String)?
+  public var detail6: (name: Swift.String, value: Swift.String)?
+  public var skFido: Swift.Bool
+  public var internalCredId: Swift.String
+}
+public class CredentialsViewModel {
+  public var delegate: SingularKey.CredentialsViewModelDelegate?
+  public var internalCredentials: [[Swift.String : Swift.String]]
+  public var credentials: [SingularKey.CredentialModel]
+  public var accessToken: (token: Swift.String, tokenType: Swift.String)?
+  public init()
+  public func getCredentials()
+  public func addCredItem(cred: SingularKey.CredentialModel)
+  public func deleteAllInternalCredentils()
+  public func deleteItem(credId: Swift.String)
+  public func getLatestRecords() -> [SingularKey.CredRecord]
+  @objc deinit
+}
+public class KeyAccess {
+  public init()
+  public func sign(hash data: Foundation.Data, pubKey: Swift.String, service: Swift.String, callback: @escaping (Foundation.Data?, Swift.Error?) -> ())
+  @objc deinit
+}
+indirect public enum CBOR : Swift.Equatable, Swift.Hashable, Swift.ExpressibleByNilLiteral, Swift.ExpressibleByIntegerLiteral, Swift.ExpressibleByStringLiteral, Swift.ExpressibleByArrayLiteral, Swift.ExpressibleByDictionaryLiteral, Swift.ExpressibleByBooleanLiteral, Swift.ExpressibleByFloatLiteral {
+  case unsignedInt(Swift.UInt64)
+  case negativeInt(Swift.UInt64)
+  case byteString([Swift.UInt8])
+  case utf8String(Swift.String)
+  case array([SingularKey.CBOR])
+  case map([SingularKey.CBOR : SingularKey.CBOR])
+  case tagged(SingularKey.CBOR.Tag, SingularKey.CBOR)
+  case simple(Swift.UInt8)
+  case boolean(Swift.Bool)
+  case null
+  case undefined
+  case half(Swift.Float32)
+  case float(Swift.Float32)
+  case double(Swift.Float64)
+  case `break`
+  public var hashValue: Swift.Int {
+    get
+  }
+  public subscript(position: SingularKey.CBOR) -> SingularKey.CBOR? {
+    get
+    set(x)
+  }
+  public init(nilLiteral: ())
+  public init(integerLiteral value: Swift.Int)
+  public init(extendedGraphemeClusterLiteral value: Swift.String)
+  public init(unicodeScalarLiteral value: Swift.String)
+  public init(stringLiteral value: Swift.String)
+  public init(arrayLiteral elements: SingularKey.CBOR...)
+  public init(dictionaryLiteral elements: (SingularKey.CBOR, SingularKey.CBOR)...)
+  public init(booleanLiteral value: Swift.Bool)
+  public init(floatLiteral value: Swift.Float32)
+  public static func == (lhs: SingularKey.CBOR, rhs: SingularKey.CBOR) -> Swift.Bool
+  public struct Tag : Swift.RawRepresentable, Swift.Equatable, Swift.Hashable {
+    public let rawValue: Swift.UInt64
+    public init(rawValue: Swift.UInt64)
+    public var hashValue: Swift.Int {
+      get
+    }
+    public typealias RawValue = Swift.UInt64
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias IntegerLiteralType = Swift.Int
+  public typealias StringLiteralType = Swift.String
+  public typealias ArrayLiteralElement = SingularKey.CBOR
+  public typealias Key = SingularKey.CBOR
+  public typealias Value = SingularKey.CBOR
+  public typealias BooleanLiteralType = Swift.Bool
+  public typealias FloatLiteralType = Swift.Float32
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+extension CBOR.Tag {
+  public static var standardDateTimeString: SingularKey.CBOR.Tag
+  public static var epochBasedDateTime: SingularKey.CBOR.Tag
+  public static var positiveBignum: SingularKey.CBOR.Tag
+  public static var negativeBignum: SingularKey.CBOR.Tag
+  public static var decimalFraction: SingularKey.CBOR.Tag
+  public static var bigfloat: SingularKey.CBOR.Tag
+  public static var expectedConversionToBase64URLEncoding: SingularKey.CBOR.Tag
+  public static var expectedConversionToBase64Encoding: SingularKey.CBOR.Tag
+  public static var expectedConversionToBase16Encoding: SingularKey.CBOR.Tag
+  public static var encodedCBORDataItem: SingularKey.CBOR.Tag
+  public static var uri: SingularKey.CBOR.Tag
+  public static var base64Url: SingularKey.CBOR.Tag
+  public static var base64: SingularKey.CBOR.Tag
+  public static var regularExpression: SingularKey.CBOR.Tag
+  public static var mimeMessage: SingularKey.CBOR.Tag
+  public static var uuid: SingularKey.CBOR.Tag
+  public static var selfDescribeCBOR: SingularKey.CBOR.Tag
+}
+public struct Helpers {
+  public static func getAlphaNumericRandomText(length: Swift.Int) -> Swift.String
+  public static func toByteArrary<T>(value: T) -> [Swift.UInt8] where T : Swift.FixedWidthInteger, T : Swift.UnsignedInteger
+  public static func modalityName(by modalityFlag: Security.SecAccessControlCreateFlags) -> Swift.String
+  public static func modalityFriendlyName(by modalityName: Swift.String) -> Swift.String
+  public static func getDeviceInfo() -> [Swift.String : Swift.String]
+}
+extension Data {
+  public var toHexString: Swift.String {
+    get
+  }
+}
+public struct SHA256Helper {
+  public init()
+  public func digest(input: Swift.String) -> [Swift.UInt8]
+  public func digest(input: Foundation.Data) -> [Swift.UInt8]
+  public func digest(inputBytes: [Swift.UInt8]) -> Foundation.Data
+}
+extension String {
+  public func base64urlToBase64() -> Swift.String
+  public func base64ToBase64url() -> Swift.String
+  public var toHexString: Swift.String {
+    get
+  }
+  public func substring(from: Swift.Int?, to: Swift.Int?) -> Swift.String
+  public func substring(from: Swift.Int) -> Swift.String
+  public func substring(to: Swift.Int) -> Swift.String
+  public func substring(from: Swift.Int?, length: Swift.Int) -> Swift.String
+  public func substring(length: Swift.Int, to: Swift.Int?) -> Swift.String
+}
+extension StringProtocol {
+  public var hexa2Bytes: [Swift.UInt8] {
+    get
+  }
+}
+extension Collection where Self.Element == Swift.UInt8 {
+  public var data: Foundation.Data {
+    get
+  }
+  public var hexa: Swift.String {
+    get
+  }
+}
+public enum CBORError : Swift.Error {
+  case unfinishedSequence
+  case wrongTypeInsideSequence
+  case tooLongSequence
+  case incorrectUTF8String
+  public static func == (a: SingularKey.CBORError, b: SingularKey.CBORError) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+extension CBOR {
+  public static func decode(_ input: [Swift.UInt8]) throws -> SingularKey.CBOR?
+}
+public class CBORDecoder {
+  public init(stream: SingularKey.CBORInputStream)
+  public init(input: Swift.ArraySlice<Swift.UInt8>)
+  public init(input: [Swift.UInt8])
+  public func decodeItem() throws -> SingularKey.CBOR?
+  @objc deinit
+}
+public enum SingularKeyError : Swift.Error {
+  case oSStatusError(status: Darwin.OSStatus)
+  case invalidHashLength(provided: Swift.Int, required: Swift.Int)
+  case base46ToDataConversion
+  case unhandledSecKeyReferenceToDataConversion(data: Swift.AnyObject?)
+  case dictionaryKeyValueNotFound(dict: Swift.AnyObject?, key: Swift.String?)
+  case accessControl(string: Swift.String)
+  case credentialAlreadyExistsForRPId(rpid: Swift.String)
+  case unknownAccessModality(supplied: Swift.String)
+  case unknown(details: Swift.String)
+}
+extension SingularKeyError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public enum Curve {
+  case p192
+  case p224
+  case p256
+  case p384
+  case secp192r1
+  case secp256r1
+  case secp224r1
+  case secp384r1
+  case none
+  public static func == (a: SingularKey.Curve, b: SingularKey.Curve) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+open class SingularKeyCore {
+  public static var shared: SingularKey.SingularKeyCore
+  public var curve: SingularKey.Curve
+  public func configure(rpId: Swift.String, origin: Swift.String, proxyURL: Swift.String)
+  public func getRPID() -> Swift.String?
+  public func getOrigin() -> Swift.String?
+  public func getProxyURL() -> Swift.String?
+  @objc deinit
+}
