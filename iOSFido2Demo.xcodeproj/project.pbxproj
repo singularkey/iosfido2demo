@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83616E211F17C790D6F3B093 /* libPods-iOSFido2DemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CFCE0C9977F7FAF45A495F6 /* libPods-iOSFido2DemoTests.a */; };
 		D58338AA22B8AB6F000AEDA0 /* NetworkAPIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58338A922B8AB6F000AEDA0 /* NetworkAPIUtils.swift */; };
 		D58338AC22B8AE39000AEDA0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58338AB22B8AE39000AEDA0 /* HomeViewController.swift */; };
 		D58CD204231E3307007196B3 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58CD203231E3307007196B3 /* SignUpViewModel.swift */; };
@@ -27,8 +28,8 @@
 		D5D2CC3522B76B2F00FE64BA /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2CC3022B76B2F00FE64BA /* UIViewExtension.swift */; };
 		D5D2CC3622B76B2F00FE64BA /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2CC3222B76B2F00FE64BA /* ShadowButton.swift */; };
 		D5D2CC3722B76B2F00FE64BA /* BoardedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D2CC3322B76B2F00FE64BA /* BoardedTextField.swift */; };
-		D5DCC62223AB71570078A501 /* SingularKey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5DCC62123AB71570078A501 /* SingularKey.framework */; };
-		D5DCC62323AB715E0078A501 /* SingularKey.framework in Embed Frameworks (1 item) */ = {isa = PBXBuildFile; fileRef = D5DCC62123AB71570078A501 /* SingularKey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E237BC10572A55F5D5496B25 /* libPods-iOSFido2Demo-iOSFido2DemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E480A6236DE1A421354519D /* libPods-iOSFido2Demo-iOSFido2DemoUITests.a */; };
+		FE9AB21B5C74E8DA54F74BA9 /* libPods-iOSFido2Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E29636630A44E563245CBD /* libPods-iOSFido2Demo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,21 +49,16 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		D54B2E4422BA55C00080D243 /* Embed Frameworks (1 item) */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				D5DCC62323AB715E0078A501 /* SingularKey.framework in Embed Frameworks (1 item) */,
-			);
-			name = "Embed Frameworks (1 item)";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		0CC4A50DB9BC90C2180CB623 /* Pods-iOSFido2Demo-iOSFido2DemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFido2Demo-iOSFido2DemoUITests.release.xcconfig"; path = "Target Support Files/Pods-iOSFido2Demo-iOSFido2DemoUITests/Pods-iOSFido2Demo-iOSFido2DemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2E480A6236DE1A421354519D /* libPods-iOSFido2Demo-iOSFido2DemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSFido2Demo-iOSFido2DemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		424C2B72287139090E68C899 /* Pods-iOSFido2Demo-iOSFido2DemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFido2Demo-iOSFido2DemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-iOSFido2Demo-iOSFido2DemoUITests/Pods-iOSFido2Demo-iOSFido2DemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5B7F2E0BABE42F43FE1D2403 /* Pods-iOSFido2Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFido2Demo.debug.xcconfig"; path = "Target Support Files/Pods-iOSFido2Demo/Pods-iOSFido2Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		61ECE2FBE3369750F387ED4A /* Pods-iOSFido2Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFido2Demo.release.xcconfig"; path = "Target Support Files/Pods-iOSFido2Demo/Pods-iOSFido2Demo.release.xcconfig"; sourceTree = "<group>"; };
+		7140E6941B4AE4F53FF8BC56 /* Pods-iOSFido2DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFido2DemoTests.debug.xcconfig"; path = "Target Support Files/Pods-iOSFido2DemoTests/Pods-iOSFido2DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9CFCE0C9977F7FAF45A495F6 /* libPods-iOSFido2DemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSFido2DemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B433008DA85FA2D6BD597187 /* Pods-iOSFido2DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFido2DemoTests.release.xcconfig"; path = "Target Support Files/Pods-iOSFido2DemoTests/Pods-iOSFido2DemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		D2E29636630A44E563245CBD /* libPods-iOSFido2Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSFido2Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58338A922B8AB6F000AEDA0 /* NetworkAPIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPIUtils.swift; sourceTree = "<group>"; };
 		D58338AB22B8AE39000AEDA0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D58CD203231E3307007196B3 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
@@ -97,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5DCC62223AB71570078A501 /* SingularKey.framework in Frameworks */,
+				FE9AB21B5C74E8DA54F74BA9 /* libPods-iOSFido2Demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83616E211F17C790D6F3B093 /* libPods-iOSFido2DemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,16 +109,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E237BC10572A55F5D5496B25 /* libPods-iOSFido2Demo-iOSFido2DemoUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C4DEFA1B23370732260D68B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B7F2E0BABE42F43FE1D2403 /* Pods-iOSFido2Demo.debug.xcconfig */,
+				61ECE2FBE3369750F387ED4A /* Pods-iOSFido2Demo.release.xcconfig */,
+				424C2B72287139090E68C899 /* Pods-iOSFido2Demo-iOSFido2DemoUITests.debug.xcconfig */,
+				0CC4A50DB9BC90C2180CB623 /* Pods-iOSFido2Demo-iOSFido2DemoUITests.release.xcconfig */,
+				7140E6941B4AE4F53FF8BC56 /* Pods-iOSFido2DemoTests.debug.xcconfig */,
+				B433008DA85FA2D6BD597187 /* Pods-iOSFido2DemoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D54B2E2922BA47B80080D243 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				D5DCC62123AB71570078A501 /* SingularKey.framework */,
+				D2E29636630A44E563245CBD /* libPods-iOSFido2Demo.a */,
+				2E480A6236DE1A421354519D /* libPods-iOSFido2Demo-iOSFido2DemoUITests.a */,
+				9CFCE0C9977F7FAF45A495F6 /* libPods-iOSFido2DemoTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -134,6 +148,7 @@
 				D5D2CBDD22B75D8C00FE64BA /* iOS iOSFido2DemoUITests */,
 				D5D2CBBC22B75D8B00FE64BA /* Products */,
 				D54B2E2922BA47B80080D243 /* Frameworks */,
+				9C4DEFA1B23370732260D68B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -219,10 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5D2CBE322B75D8C00FE64BA /* Build configuration list for PBXNativeTarget "iOSFido2Demo" */;
 			buildPhases = (
+				04D664B80524AB9AF670DA39 /* [CP] Check Pods Manifest.lock */,
+				CEEEEE2FC564283707EB2576 /* [CP] Prepare Artifacts */,
 				D5D2CBB722B75D8B00FE64BA /* Sources */,
 				D5D2CBB822B75D8B00FE64BA /* Frameworks */,
 				D5D2CBB922B75D8B00FE64BA /* Resources */,
-				D54B2E4422BA55C00080D243 /* Embed Frameworks (1 item) */,
+				F3ABE08BFB5A423E1E9A787C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,6 +254,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5D2CBE622B75D8C00FE64BA /* Build configuration list for PBXNativeTarget "iOSFido2DemoTests" */;
 			buildPhases = (
+				D32568A12CF41246E89A37B6 /* [CP] Check Pods Manifest.lock */,
 				D5D2CBCB22B75D8C00FE64BA /* Sources */,
 				D5D2CBCC22B75D8C00FE64BA /* Frameworks */,
 				D5D2CBCD22B75D8C00FE64BA /* Resources */,
@@ -255,9 +273,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5D2CBE922B75D8C00FE64BA /* Build configuration list for PBXNativeTarget "iOSFido2DemoUITests" */;
 			buildPhases = (
+				B342D3877A2FE0CF6A87F6BE /* [CP] Check Pods Manifest.lock */,
+				CFE441C73E2B65512507DB15 /* [CP] Prepare Artifacts */,
 				D5D2CBD622B75D8C00FE64BA /* Sources */,
 				D5D2CBD722B75D8C00FE64BA /* Frameworks */,
 				D5D2CBD822B75D8C00FE64BA /* Resources */,
+				F99ACE578142FB8A5AC1CF6F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -338,6 +359,143 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04D664B80524AB9AF670DA39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSFido2Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B342D3877A2FE0CF6A87F6BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSFido2Demo-iOSFido2DemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEEEEE2FC564283707EB2576 /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSFido2Demo/Pods-iOSFido2Demo-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSFido2Demo/Pods-iOSFido2Demo-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSFido2Demo/Pods-iOSFido2Demo-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFE441C73E2B65512507DB15 /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSFido2Demo-iOSFido2DemoUITests/Pods-iOSFido2Demo-iOSFido2DemoUITests-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSFido2Demo-iOSFido2DemoUITests/Pods-iOSFido2Demo-iOSFido2DemoUITests-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSFido2Demo-iOSFido2DemoUITests/Pods-iOSFido2Demo-iOSFido2DemoUITests-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D32568A12CF41246E89A37B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSFido2DemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3ABE08BFB5A423E1E9A787C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSFido2Demo/Pods-iOSFido2Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSFido2Demo/Pods-iOSFido2Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSFido2Demo/Pods-iOSFido2Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F99ACE578142FB8A5AC1CF6F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSFido2Demo-iOSFido2DemoUITests/Pods-iOSFido2Demo-iOSFido2DemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSFido2Demo-iOSFido2DemoUITests/Pods-iOSFido2Demo-iOSFido2DemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSFido2Demo-iOSFido2DemoUITests/Pods-iOSFido2Demo-iOSFido2DemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D5D2CBB722B75D8B00FE64BA /* Sources */ = {
@@ -531,6 +689,7 @@
 		};
 		D5D2CBE422B75D8C00FE64BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B7F2E0BABE42F43FE1D2403 /* Pods-iOSFido2Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -553,6 +712,7 @@
 		};
 		D5D2CBE522B75D8C00FE64BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61ECE2FBE3369750F387ED4A /* Pods-iOSFido2Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -575,6 +735,7 @@
 		};
 		D5D2CBE722B75D8C00FE64BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7140E6941B4AE4F53FF8BC56 /* Pods-iOSFido2DemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -596,6 +757,7 @@
 		};
 		D5D2CBE822B75D8C00FE64BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B433008DA85FA2D6BD597187 /* Pods-iOSFido2DemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -617,6 +779,7 @@
 		};
 		D5D2CBEA22B75D8C00FE64BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 424C2B72287139090E68C899 /* Pods-iOSFido2Demo-iOSFido2DemoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -637,6 +800,7 @@
 		};
 		D5D2CBEB22B75D8C00FE64BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CC4A50DB9BC90C2180CB623 /* Pods-iOSFido2Demo-iOSFido2DemoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
