@@ -8,14 +8,18 @@ This demonstration requires Demo RP (Relying Party) Server (https://github.com/s
 ------------
 
 ### Dependencies
-* iOS Device 9.0 or above with FaceId/TouchId/Passcode enabled
+* iOS Device 12.1 or above with FaceId/TouchId/Passcode enabled
 * Singular Key iOS Framework
 * RP Server (https://github.com/singularkey/webauthndemo) - e.g. https://api.yourcompany.com
 * Singular Key API Key
 
 ### Install
-```sh
+```
 git clone https://github.com/singularkey/iosfido2demo.git
+cd iosfido2demo
+pod install
+open iOSFido2Demo.xcworkspace
+
 ```
 
 ### Configure
